@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abandono Escolar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center" style="background-image: url('https://periodicoopcion.com/storage/2024/09/abandono-escuela.jpg');">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl" style="background-color:beige;">
+        <h2 class="text-2xl font-bold mb-6 text-center">Ingrese los datos de su estudiante</h2>
+        <form method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block font-medium">Sexo</label>
+                <select name="sex" class="w-full p-2 border rounded">
+                    <option value=1>Masculino</option>
+                    <option value=0>Femenino</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Edad</label>
+                <input type="number" name="age" min="10" max="23" class="w-full p-2 border rounded" required>
+            </div>
+            <div>
+                <label class="block font-medium">Dirección</label>
+                <select name="address" class="w-full p-2 border rounded">
+                    <option value=1>Urbano</option>
+                    <option value=0>Rural</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Estado Parental</label>
+                <select name="Pstatus" class="w-full p-2 border rounded">
+                    <option value=1>Juntos</option>
+                    <option value=0>Separados</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Educación Madre</label>
+                <select name="Medu" class="w-full p-2 border rounded">
+                    <option value=0>Ninguna</option>
+                    <option value=1>Bachillerato</option>
+                    <option value=2>Técnico</option>
+                    <option value=3>Tecnológico</option>
+                    <option value=4>Profesional</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Educación Padre</label>
+                <select name="Fedu" class="w-full p-2 border rounded">
+                    <option value=0>Ninguna</option>
+                    <option value=1>Bachillerato</option>
+                    <option value=2>Técnico</option>
+                    <option value=3>Tecnológico</option>
+                    <option value=4>Profesional</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Tutor</label>
+                <select name="guardian" class="w-full p-2 border rounded">
+                    <option value=1>Madre</option>
+                    <option value=0>Padre</option>
+                    <option value=2>Otro</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Tiempo de Viaje (horas)</label>
+                <input type="number" name="traveltime" min="1" max="4"class="w-full p-2 border rounded" required>
+            </div>
+            <div>
+                <label class="block font-medium">Tiempo de Estudio (horas)</label>
+                <input type="number" name="studytime" min="1" max="4" class="w-full p-2 border rounded" required>
+            </div>
+            <div>
+                <label class="block font-medium">Num. de Reprobaciones</label>
+                <input type="number" name="failures" min="0" max="3"class="w-full p-2 border rounded" required>
+            </div>
+            <div>
+                <label class="block font-medium">Apoyo Escolar</label>
+                <select name="schoolsup" class="w-full p-2 border rounded">
+                    <option value="True">Sí</option>
+                    <option value="False">No</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Actividades Extracurriculares</label>
+                <select name="activities" class="w-full p-2 border rounded">
+                    <option value="True">Sí</option>
+                    <option value="False">No</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Desea Educación Superior</label>
+                <select name="higher" class="w-full p-2 border rounded">
+                    <option value="True">Sí</option>
+                    <option value="False">No</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Acceso a Internet</label>
+                <select name="internet" class="w-full p-2 border rounded">
+                    <option value="True">Sí</option>
+                    <option value="False">No</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Relación Amorosa</label>
+                <select name="romantic" class="w-full p-2 border rounded">
+                    <option value="True">Sí</option>
+                    <option value="False">No</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Relación Familiar</label>
+                <select name="famrel" class="w-full p-2 border rounded">
+                    <option value=0>Muy mala</option>
+                    <option value=1>Mala</option>
+                    <option value=2>Regular</option>
+                    <option value=3>Buena</option>
+                    <option value=4>Excelente</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Tiempo Libre (horas)</label>
+                <input type="number" name="freetime" min="0" max="5" class="w-full p-2 border rounded" required>
+            </div>
+            <div>
+                <label class="block font-medium">Salidas con amigos</label>
+                <select name="goout" class="w-full p-2 border rounded">
+                    <option value=1>No sale</option>
+                    <option value=2>Muy poco</option>
+                    <option value=3>Algunas veces</option>
+                    <option value=4>Frecuentemente</option>
+                    <option value=5>Todos los dias</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Alcohol entre semana</label>
+                <select name="Dalc" class="w-full p-2 border rounded">
+                    <option value=1>Nunca</option>
+                    <option value=2>Muy poco</option>
+                    <option value=3>Algunas veces</option>
+                    <option value=4>Frecuentemente</option>
+                    <option value=5>Todos los dias</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Alcohol fin de semana</label>
+                <select name="Walc" class="w-full p-2 border rounded">
+                    <option value=1>Nunca</option>
+                    <option value=2>Muy poco</option>
+                    <option value=3>Algunas veces</option>
+                    <option value=4>Frecuentemente</option>
+                    <option value=5>Siempre</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Salud</label>
+                <select name="health" class="w-full p-2 border rounded">
+                    <option value=1>Muy mala</option>
+                    <option value=2>Mala</option>
+                    <option value=3>Regular</option>
+                    <option value=4>Buena</option>
+                    <option value=5>Excelente</option>
+                </select>
+            </div>
+            <div>
+                <label class="block font-medium">Inasistencias</label>
+                <input type="number" name="absences" min="0" max="93" class="w-full p-2 border rounded" required>
+            </div>
+            <div>
+                <label class="block font-medium">Nota G1</label>
+                <input type="number" name="G1" min="0" max="20" class="w-full p-2 border rounded" required>
+            </div>
+            <div>
+                <label class="block font-medium">Nota G2</label>
+                <input type="number" name="G2" min="0" max="20" class="w-full p-2 border rounded" required>
+            </div>
+            <div class="md:col-span-2">
+                <label class="block font-medium">Nota G3</label>
+                <input type="number" name="G3" min="0" max="20" class="w-full p-2 border rounded" required>
+            </div>
+            <div class="md:col-span-2 text-center mt-4">
+                <div class="md:col-span-2 text-center mt-4 flex justify-center gap-4">
+                    <button type="submit" name="accion" value="predecir"
+                        class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Predecir</button>
+
+                    <button type="submit" name="accion" value="ver_grafica" 
+                        class="bg-purple-500 text-white px-6 py-2 rounded hover:bg-purple-600">Ver Gráfica</button>
+                </div>
+            </div>
+        </form>
+
+        {% if prediccion is not none %}
+        <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+            <div class="bg-white p-6 rounded-lg shadow-xl max-w-md w-full relative">
+                <button onclick="document.getElementById('modal').classList.add('hidden')"
+                    class="absolute top-2 right-2 text-gray-500 hover:text-red-600 text-xl font-bold">&times;</button>
+                <h3 class="text-xl font-semibold text-center mb-4">Resultado</h3>
+                <p class="text-center text-lg">
+                    <strong>¿Abandonará el estudiante?:</strong>
+                    <span class="{{ 'text-red-600' if prediccion == 1 else 'text-green-600' }}">
+                        {{ 'Sí' if prediccion == 1 else 'No' }}
+                    </span>
+                </p>
+                <div class="mt-6 text-center">
+                    <button onclick="document.getElementById('modal').classList.add('hidden')"
+                        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Aceptar</button>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if grafica %}
+        <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+            <div class="bg-white p-10 rounded-lg shadow-xl max-w-4xl w-full relative">
+                <div class="flex flex-col md:flex-row justify-center items-start gap-12 mt-1 text-center">
+                    <div class="flex-1">
+                        <h3 class="text-l font-bold mb-6">Porcentaje de Abandono</h3>
+                        <img src="data:image/png;base64,{{ grafica }}" alt="Gráfica de abandono" class="mx-auto rounded shadow-md" style="max-width:600px; width:100%; height:auto;">
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-l font-bold mb-6">Variables que influyen en el abandono</h3>
+                        <img src="data:image/png;base64,{{ grafica_importancia }}" alt="Importancia de características" class="mx-auto rounded shadow-md" style="max-width:600px; width:100%; height:auto;">
+                    </div>
+                </div>
+                <div class="mt-6 text-center"></div>
+                        <button onclick="document.getElementById('modal').classList.add('hidden')"
+                            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Aceptar</button>
+                </div>            
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</body>
+</html>
