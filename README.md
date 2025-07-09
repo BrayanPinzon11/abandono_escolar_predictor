@@ -53,7 +53,7 @@ Algunas variables usadas para la predicción:
    python app.py
    \`\`\`
 
-5. Abre tu navegador en \`http://127.0.0.1:5000\`
+5. Abre tu navegador en \`http://127.0.0.1:8080\`
 
 ## Visualizaciones
 
